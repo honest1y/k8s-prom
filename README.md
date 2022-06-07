@@ -2,13 +2,6 @@
 
 only test on kubernetes v1.24.x
 
-ref
-
-- [prometheus](https://github.com/stefanprodan/k8s-prom-hpa/tree/master/prometheus) deploy Prometheus Server
-- [prometheus-adapter](https://github.com/kubernetes-sigs/prometheus-adapter/tree/master/deploy/manifests) deploy custom-metrics-apiserver
-- grafana
-  - [grafana.yaml](https://grafana.com/docs/grafana/latest/installation/kubernetes/#create-grafana-kubernetes-manifest)
-
 ## step
 
 ```
@@ -29,6 +22,6 @@ kubectl apply -f ./prometheus
 # 5. deploy prometheus-adapter
 kubectl apply -f ./prometheus-adapter
 
-# 6. deploy grafana, default account `admin/admin`
+# 6. deploy grafana, default account/password `admin/admin`
 kubectl apply -f grafana/grafana.yaml
 ```
